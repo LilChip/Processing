@@ -21,13 +21,11 @@ void setup () {
   background (176, 176, 255);
 
   balls[0] = new Ball();
-  // println ("0 ", num_balls, balls[0].x, balls[0].y, balls[0].rad);
 
   num_balls++;
 
   for (int i = 0; i < max_attempts && num_balls < (balls.length - 1); i++) {
     btemp = new Ball();
-    //    println (i, num_balls, btemp.x, btemp.y, btemp.rad);
     if (!btemp.isOverlap (num_balls)) {
       balls[num_balls] = new Ball();
       balls[num_balls] = btemp;
@@ -83,7 +81,6 @@ void draw () {
         }
       }
     }
-    //    println (dir_min_x, dir_min_x);
 
     b.x = (balls[i].x + dir_min_x + width) % width;
     b.y = (balls[i].y + dir_min_y + height) % height;
